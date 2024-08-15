@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-dark);
+  padding: 0 122px;
+  clip-path: polygon(2% 0, 98% 0, 100% 50%, 98% 100%, 2% 100%, 0% 50%);
+  font-family: var(--font-family-secondary);
+
+  .links {
+    gap: 86px;
+    display: flex;
+  }
+
+  a {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 41px 0 40px;
+    white-space: nowrap;
+  }
+
+  .logo {
+    height: 66px;
+    margin: 13px 0 21px;
+  }
+
+  .rightBlock {
+    display: flex;
+    align-items: center;
+  }
+
+  .player {
+    width: 360px;
+    height: 64px;
+    background-color: #261e1c;
+    margin-left: 122px;
+  }
+}
