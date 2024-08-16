@@ -1,9 +1,10 @@
 .button {
   font-family: var(--font-family-secondary);
   text-transform: uppercase;
-  padding: 14px 36px;
+  padding: 14px 26px;
   position: relative;
   letter-spacing: 0.05em;
+  display: inline-block;
 
   .btnBackground {
     width: calc(100% + 2px);
