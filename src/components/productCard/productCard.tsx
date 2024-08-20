@@ -3,18 +3,44 @@ import CloseIcon from '../../assets/close.svg?react';
 import ArrowIcon from '../../assets/arrow-triangle.svg?react';
 import Model from '../../assets/product.png';
 import { useMediaQuery } from 'react-responsive';
+import { ComponentPropsWithoutRef, RefObject } from 'react';
+import { clsx } from 'clsx';
+import { SwiperClass } from 'swiper/react';
+import { handleNextButtonClick, handlePrevButtonClick } from '../../common/commonFunctions.ts';
+import { DialogClose } from '@radix-ui/react-dialog';
 
-export const ProductCard = () => {
+export type ProductData = {
+  productName?: string;
+  productDescription?: string;
+  model?: string;
+  commercialProposal?: string;
+};
+
+export type ProductCardProps = {
+  productData?: ProductData;
+  swiperRef: RefObject<SwiperClass>;
+  onClose: () => void;
+} & ComponentPropsWithoutRef<'div'>;
+
+export const ProductCard = (props: ProductCardProps) => {
+  const { productData, onClose, swiperRef, className, ...restProps } = props;
+  const classNames = clsx(s.productCard, className);
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 767px)',
   });
+
   return (
-    <div className={s.productCard}>
+    <div {...restProps} className={classNames}>
       <div className={s.background}></div>
       <div>
         <div className={s.cardHeader}>
-          <h2>МАФ «КОРОБКА № 2»</h2>
-          <CloseIcon className={s.close} />
+          {/*<h2>МАФ «КОРОБКА № 2»</h2>*/}
+          <h2>{productData?.productName}</h2>
+          <DialogClose>
+            <button onClick={onClose}>
+              <CloseIcon className={s.close} />
+            </button>
+          </DialogClose>
         </div>
 
         <div className={s.cardMain}>
@@ -97,11 +123,11 @@ export const ProductCard = () => {
           получить кп
         </a>
         <div className={s.navButtons}>
-          <button>
+          <button onClick={() => handlePrevButtonClick(swiperRef)}>
             <ArrowIcon />
             Назад
           </button>
-          <button className={s.next}>
+          <button className={s.next} onClick={() => handleNextButtonClick(swiperRef)}>
             Вперед <ArrowIcon />
           </button>
         </div>
