@@ -1,3 +1,14 @@
+:root {
+  --offset-x: 120px;
+
+  @media (max-width: 1439px) {
+    --offset-x: 20px;
+  }
+  @media (max-width: 767px) {
+    --offset-x: 16px;
+  }
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;

@@ -7,17 +7,19 @@ import s from './App.module.scss';
 import { CatalogSection } from './sections/catalogSection/catalogSection.tsx';
 import { DocumentationSection } from './sections/documentationSection/documentationSection.tsx';
 import { ProjectMapSection } from './sections/projectMapSection/projectMapSection.tsx';
+import { Header } from './components/header/header.tsx';
 
 export function App() {
   return (
     <div className={s.content}>
+      <Header className={s.header} />
       <MainSection />
       <AboutSection />
-      <CatalogSection />
-      <ProjectMapSection />
+      {/*<CatalogSection />*/}
+      {/*<ProjectMapSection />*/}
       <FAQ faqData={faqData} />
       <FormSection />
-      <DocumentationSection />
+      {/*<DocumentationSection />*/}
       <Footer />
     </div>
   );

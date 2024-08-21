@@ -60,7 +60,7 @@ export const CatalogSection = () => {
   });
 
   return (
-    <section className={s.catalogSection}>
+    <section className={s.catalogSection} id='catalog'>
       <div className={s.background}>
         <img src={Background} alt='' />
       </div>

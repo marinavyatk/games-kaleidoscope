@@ -5,7 +5,7 @@ import Boy from '../../assets/boy.png';
 
 export const AboutSection = () => {
   return (
-    <section className={s.aboutSection}>
+    <section className={s.aboutSection} id='about'>
       <Separator className={s.separator} />
       <div className={s.backgroundText}>
         <span>Калейдоскоп</span>

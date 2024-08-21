@@ -9,7 +9,7 @@ import ArrowUp from '../../assets/arrow-up.svg?react';
 
 export const Footer = () => {
   return (
-    <footer className={s.footer}>
+    <footer className={s.footer} id='contacts'>
       <div className={s.footerContent}>
         <div className={s.footerLeft}>
           <p>ИП Резник Александр Александрович</p>
