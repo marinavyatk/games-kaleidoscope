@@ -6,6 +6,7 @@ import { AboutSection } from './sections/aboutSection/aboutSection.tsx';
 import s from './App.module.scss';
 import { CatalogSection } from './sections/catalogSection/catalogSection.tsx';
 import { DocumentationSection } from './sections/documentationSection/documentationSection.tsx';
+import { ProjectMapSection } from './sections/projectMapSection/projectMapSection.tsx';
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <MainSection />
       <AboutSection />
       <CatalogSection />
+      <ProjectMapSection />
       <FAQ faqData={faqData} />
       <FormSection />
       <DocumentationSection />
