@@ -15,7 +15,7 @@
     font-weight: var(--fw-bold);
     text-transform: none;
     display: block;
-    transition: margin-bottom 1s;
+    transition: margin-bottom 0.6s;
   }
 
   .answer {
@@ -29,19 +29,19 @@
     overflow: hidden;
     width: 90%;
     transition:
-      max-height 1s,
-      margin-bottom 1s;
+      max-height 0.6s,
+      margin-bottom 0.6s;
   }
 }
 
 .opened {
   .accordion {
     margin-bottom: 38px;
-    transition: margin-bottom 1s;
+    transition: margin-bottom 0.6s;
   }
 
   .question {
-    transition: margin-bottom 1s;
+    transition: margin-bottom 0.6s;
   }
 
   .answer {

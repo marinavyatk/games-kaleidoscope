@@ -8,6 +8,7 @@ import { CatalogSection } from './sections/catalogSection/catalogSection.tsx';
 import { DocumentationSection } from './sections/documentationSection/documentationSection.tsx';
 import { ProjectMapSection } from './sections/projectMapSection/projectMapSection.tsx';
 import { Header } from './components/header/header.tsx';
+import { MapSection } from './sections/mapSection/mapSection.tsx';
 
 export function App() {
   return (
@@ -15,11 +16,12 @@ export function App() {
       <Header className={s.header} />
       <MainSection />
       <AboutSection />
-      {/*<CatalogSection />*/}
-      {/*<ProjectMapSection />*/}
+      <CatalogSection />
+      <ProjectMapSection />
+      <MapSection />
       <FAQ faqData={faqData} />
       <FormSection />
-      {/*<DocumentationSection />*/}
+      <DocumentationSection />
       <Footer />
     </div>
   );

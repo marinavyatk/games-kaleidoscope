@@ -1,8 +1,10 @@
 :root {
   --offset-x: 120px;
+  --offset-y: 160px;
 
   @media (max-width: 1439px) {
     --offset-x: 20px;
+    --offset-y: 100px;
   }
   @media (max-width: 767px) {
     --offset-x: 16px;

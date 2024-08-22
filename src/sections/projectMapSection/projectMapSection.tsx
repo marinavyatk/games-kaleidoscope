@@ -30,7 +30,10 @@ export const ProjectMapSection = () => {
   return (
     <section className={s.projectMapSection} id='realized'>
       <h2>карта проекта</h2>
-      <div className={s.background}>идея и&nbsp;миссия</div>
+      <div className={s.background}>
+        идея <br />
+        и&nbsp;миссия
+      </div>
       <h3>2024 г.</h3>
       <p className={s.description}>
         Реализована первая малая архитектурная форма КОРОБКА № с функцией развлекательно-игрового
