@@ -4,17 +4,13 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import Doc from '../../assets/doc.png';
 import { useRef } from 'react';
 import { Keyboard, Navigation } from 'swiper/modules';
-import Arrow from '../../assets/arrow-up.svg?react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/zoom';
 import { ProgressBar } from '../../components/progressBar/progressBar.tsx';
 import { ViewCloserModal } from '../../layouts/modals/viewCloserModal/viewCloserModal.tsx';
-import {
-  handleNextButtonClick,
-  handlePrevButtonClick,
-  handleSwiper,
-} from '../../common/commonFunctions.ts';
+import { handleSwiper } from '../../common/commonFunctions.ts';
+import { NavButtons } from '../../components/navButtons/navButtons.tsx';
 
 export const DocumentationSection = () => {
   const swiperRef = useRef<SwiperClass>(null);
@@ -32,14 +28,8 @@ export const DocumentationSection = () => {
             <div className={s.navPanel}>
               <span>{slideNumber}</span>
               <ProgressBar currentSlide={index + 1} total={docsData.length} />
-              <div className={s.navButtons}>
-                <button className={s.btnPrev} onClick={() => handlePrevButtonClick(swiperRef)}>
-                  <Arrow />
-                </button>
-                <button className={s.btnNext} onClick={() => handleNextButtonClick(swiperRef)}>
-                  <Arrow />
-                </button>
-              </div>
+
+              <NavButtons swiperRef={swiperRef} />
             </div>
           </div>
           <div className={s.description}>
