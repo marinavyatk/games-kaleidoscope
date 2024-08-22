@@ -24,7 +24,7 @@ export const productData = [
   },
 ];
 
-const categories = ['МАФ «КОРОБКА №»', 'МАФ «Выбил из игры»', 'МАФ «Вперёд в будущее»'];
+const categories = ['МАФ «КОРОБКА\u00A0№»', 'МАФ «Выбил из игры»', 'МАФ «Вперёд в будущее»'];
 const cardData = [
   {
     cardName: 'КОРОБКА № 1',
@@ -65,8 +65,10 @@ export const CatalogSection = () => {
         <img src={Background} alt='' />
       </div>
       <h2>Каталог</h2>
-      <Carousel items={cardData} />
-      <div className={s.categories}>{categoriesButtons}</div>
+      <div className={s.catalogMain}>
+        <Carousel items={cardData} />
+        <div className={s.categories}>{categoriesButtons}</div>
+      </div>
     </section>
   );
 };

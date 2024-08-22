@@ -1,5 +1,4 @@
 .carousel {
-  height: 660px;
   margin: auto;
   position: relative;
 }
@@ -30,5 +29,18 @@
 
   .btnNext {
     transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel {
+    margin: 0;
+
+    .itemsContainer {
+      min-height: 400px;
+    }
+  }
+  .navPanel {
+    margin: 24px auto 0;
   }
 }
