@@ -98,16 +98,15 @@ import { apiKey, location as LOCATION, points } from './helpers';
 import s from './map.module.scss';
 import { ClusterSign } from './clusterSign.tsx';
 import PlaceMarker from '../../assets/map-marker.svg?react';
-import MapStyles from './map-styles.json';
 import MapCustomization from './map-customization.json';
 
 function Map() {
-  const [location, setLocation] = useState(LOCATION);
+  const [location] = useState(LOCATION);
   const ymap3Ref = useRef();
 
-  const getHint = useCallback((object) => object?.properties?.hint, []);
+  const getHint = useCallback((object: any) => object?.properties?.hint, []);
 
-  const marker = useCallback((feature) => {
+  const marker = useCallback((feature: any) => {
     return (
       <YMapMarker coordinates={feature.geometry.coordinates}>
         <PlaceMarker className={s.placeMarker} />
@@ -116,7 +115,7 @@ function Map() {
   }, []);
 
   const cluster = useCallback(
-    (coordinates, features) => (
+    (coordinates: any, features: any) => (
       <YMapMarker coordinates={coordinates}>
         <ClusterSign number={features.length} />
       </YMapMarker>
