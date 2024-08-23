@@ -5,6 +5,7 @@ import Headroom from 'react-headroom';
 import { useMediaQuery } from 'react-responsive';
 import { BurgerButton } from '../burgerButton/burgerButton.tsx';
 import ScrollLock from 'react-scrolllock';
+import { Player } from '../player/player.tsx';
 
 export type HeaderProps = {
   player?: ReactNode;
@@ -42,14 +43,21 @@ export const Header = (props: HeaderProps) => {
           <Logo className={s.logo} />
           <div className={s.rightBlock}>
             <a href='#contacts'>Контакты</a>
-            <div className={s.player}>Player</div>
+            <div className={s.player}>
+              {' '}
+              <Player />
+            </div>
           </div>
         </header>
       ) : (
         <div className={s.headerMobile}>
           <header className={s.header}>
             <Logo className={s.logo} />
-            {!isMobile && <div className={s.player}>Player</div>}
+            {!isMobile && (
+              <div className={s.player}>
+                <Player />
+              </div>
+            )}
             <BurgerButton onChange={() => setIsOpen((prev) => !prev)} checked={isOpen} />
           </header>
           <div className={s.background}></div>
@@ -70,7 +78,12 @@ export const Header = (props: HeaderProps) => {
               Контакты
             </a>
           </div>
-          {isMobile && <div className={s.player}>Player</div>}
+          {isMobile && (
+            <div className={s.player}>
+              <Player />
+              {/*Player*/}
+            </div>
+          )}
           <ScrollLock isActive={isOpen} />
         </div>
       )}

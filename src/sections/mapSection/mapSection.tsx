@@ -1,5 +1,6 @@
 import s from './mapSection.module.scss';
 import Background from '../../assets/map-bg.png';
+import Map from '../../components/map/map.tsx';
 
 export const MapSection = () => {
   return (
@@ -11,6 +12,7 @@ export const MapSection = () => {
         места
         <br /> размещения
       </h2>
+      <Map />
     </section>
   );
 };

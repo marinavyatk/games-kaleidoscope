@@ -20,5 +20,6 @@
     position: absolute;
     top: var(--offset-y);
     left: var(--offset-x);
+    z-index: 1;
   }
 }
