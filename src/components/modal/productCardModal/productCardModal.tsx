@@ -1,7 +1,7 @@
 import s from './productCardModal.module.scss';
-import { Modal } from '../../../components/modal/modal.tsx';
-import { ProductCard, ProductData } from '../../../components/productCard/productCard.tsx';
-import { Button } from '../../../components/button/button.tsx';
+import { Modal } from '../modal.tsx';
+import { ProductCard, ProductData } from '../../../sections/productCard/productCard.tsx';
+import { Button } from '../../button/button.tsx';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Keyboard, Navigation } from 'swiper/modules';
 import { handleSwiper } from '../../../common/commonFunctions.ts';

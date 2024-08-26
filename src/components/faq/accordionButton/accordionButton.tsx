@@ -12,7 +12,12 @@ export const AccordionButton = (props: AccordionButtonProps) => {
   const classNames = clsx(s.buttonContainer, className, { [s.opened]: opened });
 
   return (
-    <button {...restProps} className={classNames} onClick={() => setOpened(!opened)}>
+    <button
+      {...restProps}
+      className={classNames}
+      onClick={() => setOpened(!opened)}
+      aria-label={opened ? 'Свернуть' : 'Развернуть'}
+    >
       <div className={s.closedBackground}></div>
       <div className={s.horizontal}></div>
       <div className={s.vertical}></div>

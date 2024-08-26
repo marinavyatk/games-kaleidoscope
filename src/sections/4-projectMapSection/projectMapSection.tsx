@@ -4,7 +4,7 @@ import StepPhoto from '../../assets/step-photo.png';
 import { useRef } from 'react';
 import { handleSwiper } from '../../common/commonFunctions.ts';
 import { Keyboard, Navigation } from 'swiper/modules';
-import { ViewCloserModal } from '../../layouts/modals/viewCloserModal/viewCloserModal.tsx';
+import { ViewCloserModal } from '../../components/modal/viewCloserModal/viewCloserModal.tsx';
 import { stepsData, Timeline } from '../../components/timeline/timeline.tsx';
 import 'swiper/scss';
 import { NavButtons } from '../../components/navButtons/navButtons.tsx';

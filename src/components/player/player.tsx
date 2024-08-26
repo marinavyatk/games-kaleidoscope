@@ -109,9 +109,6 @@ export const Player = () => {
   const [currTime, setCurrTime] = useState(0);
 
   const isDraggingRef = useRef(false);
-  // console.log('isDraggingRef', isDraggingRef.current);
-
-  // console.log('currTime', currTime);
 
   const handlePlayingButtonClick = () => {
     if (isPlaying) {
@@ -124,16 +121,13 @@ export const Player = () => {
   };
 
   useEffect(() => {
-    // console.log('useEffect');
     if (!isPlaying || !sound || isDraggingRef.current) return;
 
     const interval = setInterval(() => {
-      // console.log('setInterval');
       setCurrTime(sound.seek([]));
     }, 1000);
 
     return () => {
-      // console.log('clearInterval');
       clearInterval(interval);
     };
   }, [isPlaying, sound, isDraggingRef.current]);
@@ -153,12 +147,9 @@ export const Player = () => {
             onValueCommit: (value) => {
               sound.seek([value[0]]);
               setCurrTime(value[0]);
-              // setIsDragging(false);
               isDraggingRef.current = false;
             },
             onValueChange: () => {
-              // console.log('onValueChange');
-              // setIsDragging(true);
               isDraggingRef.current = true;
             },
           }}
@@ -172,13 +163,17 @@ export const Player = () => {
             <span className={s.author}>HYONNA</span>
           </div>
           <div className={s.controlPanel}>
-            <button onClick={tempSetStartSong}>
+            <button onClick={tempSetStartSong} aria-label={'Предыдущий трек'}>
               <PlayDirectionIcon />
             </button>
-            <button onClick={handlePlayingButtonClick} className={s.btnPlay}>
+            <button
+              onClick={handlePlayingButtonClick}
+              className={s.btnPlay}
+              aria-label={isPlaying ? 'Пауза' : 'Слушать'}
+            >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
-            <button className={s.btnNext} onClick={tempSetStartSong}>
+            <button className={s.btnNext} onClick={tempSetStartSong} aria-label={'Следующий трек'}>
               <PlayDirectionIcon />
             </button>
           </div>

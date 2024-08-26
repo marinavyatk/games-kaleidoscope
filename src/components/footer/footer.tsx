@@ -20,7 +20,7 @@ export const Footer = () => {
 
         <div className={s.footerCenter}>
           <Logo className={s.logo} />
-          <a href='#top'>
+          <a href='#top' aria-label={'Перейти вверх страницы'}>
             <div className={s.arrowUp}>
               <ArrowUp />
             </div>
@@ -37,19 +37,24 @@ export const Footer = () => {
             </a>
           </p>
           <div className={s.links}>
-            <a href='#' className={s.link} rel='nofollow'>
+            <a href='#' className={s.link} rel='nofollow' aria-label={'Мы в WhatsUp'}>
               <WhatsUpIcon />
             </a>
-            <a href='#' className={s.link} rel='nofollow'>
+            <a href='#' className={s.link} rel='nofollow' aria-label={'Мы на Rutube'}>
               <RutubeIcon />
             </a>
-            <a href='#' className={s.link} rel='nofollow'>
+            <a href='#' className={s.link} rel='nofollow' aria-label={'МЫ на Youtube'}>
               <YoutubeIcon />
             </a>
-            <a href='#' className={s.link} rel='nofollow'>
+            <a href='#' className={s.link} rel='nofollow' aria-label={'Мы ВКонтакте'}>
               <VKIcon />
             </a>
-            <a href='#' className={s.link} rel='nofollow'>
+            <a
+              href='#'
+              className={s.link + ' ' + s.telegram}
+              rel='nofollow'
+              aria-label={'Мы в телеграмме'}
+            >
               <TelegramIcon />
             </a>
           </div>

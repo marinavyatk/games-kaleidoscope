@@ -105,6 +105,12 @@
         width: 30px;
       }
     }
+
+    .telegram {
+      svg {
+        margin-left: -3px;
+      }
+    }
   }
 }
 
@@ -253,6 +259,7 @@
     font-size: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     top: 40px;
     bottom: unset;

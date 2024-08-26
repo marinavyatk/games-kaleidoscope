@@ -8,7 +8,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/zoom';
 import { ProgressBar } from '../../components/progressBar/progressBar.tsx';
-import { ViewCloserModal } from '../../layouts/modals/viewCloserModal/viewCloserModal.tsx';
+import { ViewCloserModal } from '../../components/modal/viewCloserModal/viewCloserModal.tsx';
 import { handleSwiper } from '../../common/commonFunctions.ts';
 import { NavButtons } from '../../components/navButtons/navButtons.tsx';
 

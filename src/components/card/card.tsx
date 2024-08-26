@@ -3,8 +3,8 @@ import CardBackground from '../../assets/card.svg?react';
 import CatalogModel from '../../assets/catalog-model.png';
 import clsx from 'clsx';
 import s from './card.module.scss';
-import { productData } from '../../sections/catalogSection/catalogSection.tsx';
-import { ProductCardModal } from '../../layouts/modals/productCardModal/productCardModal.tsx';
+import { productData } from '../../sections/3-catalogSection/catalogSection.tsx';
+import { ProductCardModal } from '../modal/productCardModal/productCardModal.tsx';
 
 export type CardData = {
   cardName: string;

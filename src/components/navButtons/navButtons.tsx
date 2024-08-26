@@ -14,10 +14,18 @@ export const NavButtons = (props: NavButtonsProps) => {
   const classNames = clsx(s.navButtons, className);
   return (
     <div className={classNames} {...restProps}>
-      <button className={s.btnPrev} onClick={() => handlePrevButtonClick(swiperRef)}>
+      <button
+        className={s.btnPrev}
+        onClick={() => handlePrevButtonClick(swiperRef)}
+        aria-label={'Назад'}
+      >
         <Arrow />
       </button>
-      <button className={s.btnNext} onClick={() => handleNextButtonClick(swiperRef)}>
+      <button
+        className={s.btnNext}
+        onClick={() => handleNextButtonClick(swiperRef)}
+        aria-label={'Вперёд'}
+      >
         <Arrow />
       </button>
     </div>

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import s from './viewCloserModal.module.scss';
-import { Modal } from '../../../components/modal/modal.tsx';
+import { Modal } from '../modal.tsx';
 
 type ViewCloserModalProps = {
   imgSrc: string;

@@ -7,6 +7,14 @@
   }
 }
 
+.timeline {
+  .stepContainer:last-child {
+    .line {
+      display: none;
+    }
+  }
+}
+
 .stepContainer {
   width: 211px;
 }

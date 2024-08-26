@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode, useState } from 'react';
+import { ComponentPropsWithoutRef, useState } from 'react';
 import s from './header.module.scss';
 import Logo from '../../assets/logo.svg?react';
 import Headroom from 'react-headroom';
@@ -7,12 +7,10 @@ import { BurgerButton } from '../burgerButton/burgerButton.tsx';
 import ScrollLock from 'react-scrolllock';
 import { Player } from '../player/player.tsx';
 
-export type HeaderProps = {
-  player?: ReactNode;
-} & ComponentPropsWithoutRef<'header'>;
+export type HeaderProps = ComponentPropsWithoutRef<'header'>;
 
 export const Header = (props: HeaderProps) => {
-  const { player, className, ...restProps } = props;
+  const { className, ...restProps } = props;
   const isTabletOrMobile = useMediaQuery({
     query: '(max-width: 1099px)',
   });
@@ -81,7 +79,6 @@ export const Header = (props: HeaderProps) => {
           {isMobile && (
             <div className={s.player}>
               <Player />
-              {/*Player*/}
             </div>
           )}
           <ScrollLock isActive={isOpen} />
